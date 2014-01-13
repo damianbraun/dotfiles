@@ -1,0 +1,30 @@
+directory: ~/beetsmusic
+library: ~/beetslibraryfile.bd
+import:
+    copy: yes
+    write: yes
+    resume: ask
+color: yes
+per_disc_numbering: no
+paths:
+    default: $albumartist/$album%aunique{}/$disc-$track $title
+    singleton: Non-Album/$artist/$title
+    comp: Compilations/$album%aunique{}/$disc-$track $title
+    albumtype:soundtrack: Soundtracks/$album/$track $title
+log:
+    ~/beets.log
+plugins: fetchart lyrics lastgenre embedart web convert duplicates
+embedart:
+    auto: yes
+convert:
+    dest: /home/damian/Desktop/beetsconvert/
+    format: mp3
+    threads: 2
+    max_bitrate: 160
+    paths:
+        default: $albumartist/$album%aunique{}/$disc-$track $title
+        singleton: Non-Album/$artist/$title
+        comp: Compilations/$album%aunique{}/$disc-$track $title
+        albumtype:soundtrack: Soundtracks/$album/$track $title
+
+
