@@ -3,7 +3,7 @@ import sys
 import os
 
 q = ''
-commitmsg = 'updates'
+COMMITMSG = 'updates'
 
 if len(sys.argv)==1:
     print 'add files to update as arguments\nfor example\npython update.py filex file-y'
@@ -22,11 +22,11 @@ else:
     
     # git commit part
     while len(q)==0:
-        q = raw_input('should i \'git commit -m '+commitmsg+'\'? (y/n): ')
+        q = raw_input('should i \'git commit -m '+COMMITMSG+'\'? (y/n): ')
     if q=='y' or q=='Y':
         q = raw_input('you can edit commit message (\'updates\' as default): ')
         if q=='':
-            os.system('git commit -m \''+commitmsg+'\'')
+            os.system('git commit -m \''+COMMITMSG+'\'')
             print '\n'
         else:
             os.system('git commit -m \''+q+'\'')

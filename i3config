@@ -9,6 +9,8 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+exec dropboxd
+
 set $mod Mod4
 
 #Set colors variables
@@ -165,7 +167,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 	font pango:Source Code Pro 9
-	#mode hide
+	mode dock
 	tray_output primary 
 	colors {
 		background $darkblue

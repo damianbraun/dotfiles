@@ -15,7 +15,7 @@ set showmatch
 set guifont=PragmataPro
 set noswapfile
 
-colorscheme vividchalk " My fav colorsheme, vividchalk from github
+colorscheme 256-grayvim " My fav colorsheme, vividchalk from github
 set background=dark " Setting for dark background, without it colors are weird
 
 set mouse=a " Mouse support for everything
@@ -45,6 +45,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'flazz/vim-colorschemes'
 
 filetype plugin indent on     " required!
 "
