@@ -1,11 +1,18 @@
-syntax on " Syntax highlighting
+syntax enable " Syntax highlighting
 filetype indent plugin on
 
 set modeline
 set number " Numbers of lines on left side
 set hlsearch " Higlighting of search results
-set incsearch
-set autoindent " 
+set incsearch " Incremental search
+set autoindent 
+set ignorecase
+set encoding=utf-8
+set fileencoding=utf-8
+set smartcase
+set gdefault
+set showmatch
+set guifont=PragmataPro
 
 
 colorscheme vividchalk " My fav colorsheme, vividchalk from github
@@ -13,7 +20,7 @@ set background=dark " Setting for dark background, without it colors are weird
 
 set mouse=a " Mouse support for everything
 
-map <F5> :!python2
+map <F5> :!python2 %<CR>
 map <Leader>n :NERDTreeToggle<CR>
 
 noremap <Up> <NOP>
@@ -37,6 +44,7 @@ Bundle 'gmarik/vundle'
 " original repos on GitHub
 Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on     " required!
 "

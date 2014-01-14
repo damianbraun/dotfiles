@@ -40,6 +40,7 @@ alias h='history | grep $1'
 alias c='clear'
 alias mkdir='mkdir -pv'
 alias scroff='xset dpms force off'
+alias nemo='nemo --no-desktop'
 
 TERMINAL=gnome-terminal
 
