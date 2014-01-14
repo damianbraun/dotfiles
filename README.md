@@ -6,4 +6,4 @@ my config files
 python2 script for restoring configs. script ask for each file.
 
 ### ~/.vimrc
-after restoring vimrc run :BundleInstall for instaling plugins
+after restoring vimrc run `:BundleInstall` for instaling plugins

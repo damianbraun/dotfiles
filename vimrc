@@ -13,7 +13,7 @@ set smartcase
 set gdefault
 set showmatch
 set guifont=PragmataPro
-
+set noswapfile
 
 colorscheme vividchalk " My fav colorsheme, vividchalk from github
 set background=dark " Setting for dark background, without it colors are weird
