@@ -4,7 +4,7 @@ my config files
 
 ## restore.py
 python2 script for restoring configs. script ask for each file.
-`python restore.py'
+`python restore.py`
 
 ## update.py
 python2 script for fast update of this repo.

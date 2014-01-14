@@ -15,7 +15,7 @@ set showmatch
 set guifont=PragmataPro
 set noswapfile
 
-colorscheme 256-grayvim " My fav colorsheme, vividchalk from github
+colorscheme 256-grayvim
 set background=dark " Setting for dark background, without it colors are weird
 
 set mouse=a " Mouse support for everything
