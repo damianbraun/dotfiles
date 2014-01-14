@@ -1,0 +1,21 @@
+[user]
+	name = Damian Braun
+	email = brunek5252@gmail.com
+[core]
+	editor = vim
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	st = status
+	ci = commit
+	co = checkout
+	df = diff
+	br = branch
+	a = add
+[credential]
+	helper = cache --timeout=86400
+[color]
+	ui = true
+[diff]
+	external = /home/damian/Desktop/scripts/diff.py
+[merge]
+	tool = meld

@@ -11,7 +11,8 @@ files = [
         ('i3status.conf', home+'.i3status.conf'),
         ('i3config', home+'.i3/config'),
         ('beetsconfig', home+'.config/beets/config.yaml'),
-        ('bashrc', home+'.bashrc')
+        ('bashrc', home+'.bashrc'),
+        ('gitconfig', home+'.gitconfig')
     ]
 
 for file in files:
