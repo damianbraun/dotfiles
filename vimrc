@@ -46,6 +46,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'tpope/vim-surround'
 
 filetype plugin indent on     " required!
 "
