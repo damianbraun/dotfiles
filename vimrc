@@ -14,23 +14,25 @@ set gdefault
 set showmatch
 set guifont=PragmataPro
 set noswapfile
-
-colorscheme 256-grayvim
-set background=dark " Setting for dark background, without it colors are weird
+set cursorline
+set cc=80
 
 set mouse=a " Mouse support for everything
 
-map <F5> :!python2 %<CR>
-map <Leader>n :NERDTreeToggle<CR>
+let mapleader=","
 
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
 
 let NERDTreeIgnore = ['\.pyc$']
-" Vundle config below, don't mess with it (copied from https://github.com/gmarik/vundlenn)
+
+
+" PLUGINS
+" Vundle config below, don't mess with it 
+" (copied from https://github.com/gmarik/vundlenn)
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -42,11 +44,15 @@ Bundle 'gmarik/vundle'
 " My bundles here:
 "
 " original repos on GitHub
-Bundle 'scrooloose/nerdtree'
-Bundle 'msanders/snipmate.vim'
-Bundle 'tpope/vim-fugitive'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'Lokaltog/vim-powerline', {'rtp': 'powerline/bindings/vim/'}
+" Powerline setup
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+set laststatus=2
 
 filetype plugin indent on     " required!
 "
@@ -58,3 +64,22 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
+
+
+" COLORS
+set t_Co=256
+colorscheme automation
+set background=dark
+
+" CUSTOM MAPINGS
+map <F5> :!python2 %<CR>
+map <Leader>n :NERDTreeToggle<CR>
+map <Leader>. :NERDTreeFromBookmark dotfiles<CR>
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+vnoremap <Leader>s :sort<CR>
+
