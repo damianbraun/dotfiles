@@ -16,6 +16,9 @@ set guifont=PragmataPro
 set noswapfile
 set cursorline
 set cc=80
+set list
+set listchars=tab:▸\ ,eol:¬
+
 
 set mouse=a " Mouse support for everything
 
@@ -28,6 +31,7 @@ set shiftround
 set expandtab
 
 let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeShowBookmarks=1
 
 
 " PLUGINS
@@ -53,6 +57,7 @@ Bundle 'Lokaltog/vim-powerline', {'rtp': 'powerline/bindings/vim/'}
 " Powerline setup
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 set laststatus=2
+Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on     " required!
 "
