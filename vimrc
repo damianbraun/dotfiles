@@ -53,7 +53,7 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
-Bundle 'Lokaltog/vim-powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Powerline setup
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 set laststatus=2
