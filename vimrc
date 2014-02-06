@@ -57,6 +57,14 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Powerline setup
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 set laststatus=2
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
 Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on     " required!
@@ -73,8 +81,8 @@ filetype plugin indent on     " required!
 
 " COLORS
 set t_Co=256
-colorscheme automation
-set background=dark
+colorscheme solarized
+set background=light
 
 " CUSTOM MAPINGS
 map <F5> :!python2 %<CR>
