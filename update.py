@@ -10,12 +10,13 @@ if len(sys.argv)==1:
 
 else:
     # git add part
-    l=len(sys.argv)
-    for i in range(l):
-        command = 'git add '+sys.argv[i]
+    for i in enumerate(sys.argv):
+        if i[0]==0:
+            continue
+        command = 'git add '+i[1]
         while len(q)==0:
             q = raw_input('should i \''+command+'\'? (y/n): ')
-        if i!=0 and q=='y' or q=='Y':
+        if q=='y' or q=='Y':
             os.system(command)
             print '\n'
         q = ''
