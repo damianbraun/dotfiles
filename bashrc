@@ -68,6 +68,15 @@ ex ()
   fi
 }
 
+
+#Virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
+export VIRTUALENVWRAPPER_VIRTUALENV=virtualenv2
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/dev
+source /usr/bin/virtualenvwrapper.sh
+
+
 # prompt
 PS1='[\u@\h \W]\$ '
 BROWSER=/usr/bin/xdg-open

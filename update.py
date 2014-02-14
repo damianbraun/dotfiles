@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
+from colorama import Fore
 
 q = ''
 COMMITMSG = 'updates'
@@ -15,7 +16,7 @@ else:
             continue
         command = 'git add '+i[1]
         while len(q)==0:
-            q = raw_input('should i \''+command+'\'? (y/n): ')
+            q = raw_input(Fore.GREEN + 'should i \''+command+'\'? (y/n): ' + Fore.RESET)
         if q=='y' or q=='Y':
             os.system(command)
             print '\n'

@@ -15,7 +15,7 @@ set showmatch
 set guifont=PragmataPro
 set noswapfile
 set cursorline
-set cc=80
+set cc=79
 set list
 set listchars=tab:▸\ ,eol:¬
 
@@ -34,6 +34,11 @@ let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeShowBookmarks=1
 
 
+augroup python
+    autocmd!
+    autocmd BufWritePost *.py call Flake8()
+augroup END
+
 " PLUGINS
 " Vundle config below, don't mess with it 
 " (copied from https://github.com/gmarik/vundlenn)
@@ -48,8 +53,10 @@ Bundle 'gmarik/vundle'
 " My bundles here:
 "
 " original repos on GitHub
+Bundle 'davidhalter/jedi-vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'msanders/snipmate.vim'
+Bundle 'nvie/vim-flake8'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
@@ -65,7 +72,6 @@ if ! has('gui_running')
         au InsertLeave * set timeoutlen=1000
     augroup END
 endif
-Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on     " required!
 "
@@ -85,9 +91,9 @@ colorscheme solarized
 set background=light
 
 " CUSTOM MAPINGS
-map <F5> :!python2 %<CR>
-map <Leader>n :NERDTreeToggle<CR>
-map <Leader>. :NERDTreeFromBookmark dotfiles<CR>
+noremap <F5> :!python2 %<CR>
+noremap <Leader>n :NERDTreeToggle<CR>
+noremap <Leader>. :NERDTreeFromBookmark dotfiles<CR>
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
