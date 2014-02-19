@@ -41,6 +41,7 @@ alias c='clear'
 alias mkdir='mkdir -pv'
 alias scroff='xset dpms force off'
 alias nemo='nemo --no-desktop'
+alias xboxasmouse='sudo xboxdrv -w 0 --controller-slot 0 --detach-kernel-driver --mouse'
 
 TERMINAL=gnome-terminal
 

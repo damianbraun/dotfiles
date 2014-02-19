@@ -48,8 +48,7 @@ font pango:Source Code Pro 9
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym XF86AudioPlay exec --no-startup-id cmus-remote -p
-bindsym XF86AudioStop exec --no-startup-id cmus-remote -u
+bindsym XF86AudioPlay exec --no-startup-id cmus-remote -u
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal

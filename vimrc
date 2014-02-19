@@ -36,7 +36,6 @@ let NERDTreeShowBookmarks=1
 
 augroup python
     autocmd!
-    autocmd BufWritePost *.py call Flake8()
 augroup END
 
 " PLUGINS
@@ -55,8 +54,10 @@ Bundle 'gmarik/vundle'
 " original repos on GitHub
 Bundle 'davidhalter/jedi-vim'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'kien/ctrlp.vim'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 Bundle 'msanders/snipmate.vim'
-Bundle 'nvie/vim-flake8'
+Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
