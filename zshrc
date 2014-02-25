@@ -1,89 +1,69 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=10000
-setopt appendhistory autocd beep nomatch
-bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/damian/.zshrc'
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
 
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# custom settings
-autoload promptinit
-promptinit
-prompt fade green
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
+# Uncomment this to disable bi-weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
 
-# ~/.bashrc legacy
-if [ -f /etc/bash_completion ]; then
-	    . /etc/bash_completion
-fi
+# Uncomment to change how often before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
 
-xhost +local:root > /dev/null 2>&1
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
 
-alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias ls-la='ls -la'
-alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias grep='grep --color=tty -d skip'
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias np='nano PKGBUILD'
-alias cd..='cd ..'
-alias ..='cd ..'
-alias 4chan="wget -q -e robots=off -E -c -nd -nc -np -r -H -Dimages.4chan.org -Rhtml -A "jpg,png,jpeg" --directory-prefix "/home/damian/Desktop/obr" "
-alias ip2="ipython2"
-alias p2="python2"
-alias ip3="ipython"
-alias p3="python3"
-alias h='history | grep $1'
-alias c='clear'
-alias mkdir='mkdir -pv'
-alias scroff='xset dpms force off'
-alias nemo='nemo --no-desktop'
-alias xboxasmouse='sudo xboxdrv -w 0 --controller-slot 0 --detach-kernel-driver --mouse'
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-TERMINAL=gnome-terminal
+# Uncomment following line if you want to disable command autocorrection
+# DISABLE_CORRECTION="true"
 
-# ex - archive extractor
-# usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
 
+# Uncomment following line if you want to disable marking untracked files under
+# VCS as dirty. This makes repository status check for large repositories much,
+# much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-#Virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
-export VIRTUALENVWRAPPER_VIRTUALENV=virtualenv2
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/dev
-source /usr/bin/virtualenvwrapper.sh
+# Uncomment following line if you want to  shown in the command execution time stamp 
+# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
+# yyyy-mm-dd
+# HIST_STAMPS="mm/dd/yyyy"
 
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
 
-# prompt
-BROWSER=/usr/bin/xdg-open
-source ~/.autoenv/activate.sh
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# # Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
