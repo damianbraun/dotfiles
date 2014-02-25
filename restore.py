@@ -13,7 +13,8 @@ files = [
         ('beetsconfig', HOME+'.config/beets/config.yaml'),
         ('bashrc', HOME+'.bashrc'),
         ('gitconfig', HOME+'.gitconfig'),
-        ('yaourtrc', HOME+'.yaourtrc')
+        ('yaourtrc', HOME+'.yaourtrc'),
+        ('zshrc', HOME+'.zshrc')
     ]
 
 for file in files:
