@@ -14,8 +14,9 @@ files = [
         ('bashrc', HOME+'.bashrc'),
         ('gitconfig', HOME+'.gitconfig'),
         ('yaourtrc', HOME+'.yaourtrc'),
-        ('zshrc', HOME+'.zshrc')
-    ]
+        ('zshrc', HOME+'.zshrc'),
+        ('aliases', HOME+'.aliases')
+        ]
 
 for file in files:
     print "%s%s -> %s" % (PWD, file[0], file[1])

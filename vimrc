@@ -34,8 +34,9 @@ let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeShowBookmarks=1
 
 
-augroup python
+augroup group
     autocmd!
+    au FileChangedShell * echo "Warning: File changed on disk"
 augroup END
 
 " PLUGINS
