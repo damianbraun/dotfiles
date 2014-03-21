@@ -1,5 +1,3 @@
-.vimrc /home/damian/.vimrc
-config /home/damian/.i3/config
+dev /home/damian/dev
+dotfiles /home/damian/dev/dotfiles
 snippets /home/damian/.vim/bundle/snipmate.vim/snippets
-vidcatalog /home/damian/Desktop/projekty/vidcatalog
-
