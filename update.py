@@ -1,13 +1,19 @@
 #!/usr/bin/env python
 import os
 import sys
-from colorama import Fore
+try:
+    from colorama import Fore
+except ImportError:
+    print 'No colorama module found.'
+    sys.exit()
 
 q = ''
 COMMITMSG = 'updates'
 
 if len(sys.argv)==1:
-    print 'add files to update as arguments\nfor example\npython update.py filex file-y'
+    print '''add files to update as arguments
+for example
+python update.py filex file-y'''
 
 else:
     # git add part

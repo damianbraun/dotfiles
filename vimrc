@@ -37,6 +37,15 @@ let NERDTreeShowBookmarks=1
 augroup group
     autocmd!
     au FileChangedShell * echo "Warning: File changed on disk"
+
+    autocmd BufWritePost *
+        \ if filereadable('tags') |
+        \   call system('ctags -a '.expand('%')) |
+        \ endif
+
+    au Filetype arduino setlocal ts=2 sts=2 sw=2
+    au Filetype python setlocal ts=4 sts=4 sw=4
+    au Filetype html setlocal ts=2 sts=2 sw=2
 augroup END
 
 " PLUGINS
@@ -55,6 +64,8 @@ Bundle 'gmarik/vundle'
 " original repos on GitHub
 Bundle 'davidhalter/jedi-vim'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'jplaut/vim-arduino-ino'
+Bundle "sudar/vim-arduino-snippets"
 Bundle 'kien/ctrlp.vim'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 Bundle 'msanders/snipmate.vim'

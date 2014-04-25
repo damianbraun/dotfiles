@@ -11,11 +11,15 @@
 	df = diff
 	br = branch
 	a = add
+	d = difftool
 [credential]
 	helper = cache --timeout=86400
 [color]
 	ui = true
 [diff]
-	external = /home/damian/Desktop/scripts/diff.py
+	external = vimdiff
+	tool = vimdiff
 [merge]
-	tool = meld
+	tool = vimdiff
+[difftool]
+	prompt = false
