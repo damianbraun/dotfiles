@@ -18,6 +18,8 @@ set cursorline
 set cc=79
 set list
 set listchars=tab:▸\ ,eol:¬
+set autoread
+set spell
 
 
 set mouse=a " Mouse support for everything
@@ -100,6 +102,7 @@ filetype plugin indent on     " required!
 
 " COLORS
 set t_Co=256
+let g:solarized_termcolors=256
 colorscheme solarized
 set background=light
 

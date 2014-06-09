@@ -6,24 +6,26 @@ HOME = os.environ['HOME']+'/'
 q = ''
 
 files = [
-        ('vimrc', HOME+'.vimrc'),
-        ('NERDTreeBookmarks', HOME+'.NERDTreeBookmarks'),
-        ('i3status.conf', HOME+'.i3status.conf'),
-        ('i3config', HOME+'.i3/config'),
-        ('beetsconfig', HOME+'.config/beets/config.yaml'),
-        ('bashrc', HOME+'.bashrc'),
-        ('gitconfig', HOME+'.gitconfig'),
-        ('yaourtrc', HOME+'.yaourtrc'),
-        ('zshrc', HOME+'.zshrc'),
-        ('aliases', HOME+'.aliases')
+        ('vimrc', '~/.vimrc'),
+        ('NERDTreeBookmarks', '~/.NERDTreeBookmarks'),
+        ('i3status.conf', '~/.i3status.conf'),
+        ('i3config', '~/.i3/config'),
+        ('beetsconfig', '~/.config/beets/config.yaml'),
+        ('bashrc', '~/.bashrc'),
+        ('gitconfig', '~/.gitconfig'),
+        ('yaourtrc', '~/.yaourtrc'),
+        ('zshrc', '~/.zshrc'),
+        ('aliases', '~/.aliases'),
+        ('tmux.conf', '~/.tmux.conf')
         ]
 
 for file in files:
-    print "%s%s -> %s" % (PWD, file[0], file[1])
+    sendplace = os.path.expanduser(file[1])
+    print "%s%s -> %s" % (PWD, file[0], sendplace)
     while len(q) == 0:
         q = raw_input('should i symlink it? (y/n): ')
     if q == 'y' or q == 'Y':
-        command = 'ln -s %s %s' % (PWD+file[0], file[1])
+        command = 'ln -s %s %s' % (PWD+file[0], sendplace)
         print command+'\n'
         os.system(command)
     q = ''

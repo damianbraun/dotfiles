@@ -9,7 +9,6 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
 alias cd..='cd ..'
 alias ..='cd ..'
-alias 4chan="wget -q -e robots=off -E -c -nd -nc -np -r -H -Dimages.4chan.org -Rhtml -A "jpg,png,jpeg" --directory-prefix "/home/damian/Desktop/obr" "
 alias ip2="ipython2"
 alias p2="python2"
 alias ip3="ipython"
@@ -20,3 +19,4 @@ alias mkdir='mkdir -pv'
 alias scroff='xset dpms force off'
 alias nemo='nemo --no-desktop'
 alias xboxasmouse='sudo xboxdrv -w 0 --controller-slot 0 --detach-kernel-driver --mouse'
+alias tmux='tmux -2'
