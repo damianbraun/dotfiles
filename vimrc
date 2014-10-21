@@ -1,5 +1,6 @@
 syntax enable " Syntax highlighting
-filetype indent plugin on
+filetype off
+set nocompatible
 
 set modeline
 set number " Numbers of lines on left side
@@ -54,28 +55,26 @@ augroup END
 " Vundle config below, don't mess with it 
 " (copied from https://github.com/gmarik/vundlenn)
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " My bundles here:
 "
 " original repos on GitHub
-Bundle 'davidhalter/jedi-vim'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'jplaut/vim-arduino-ino'
-Bundle "sudar/vim-arduino-snippets"
-Bundle 'kien/ctrlp.vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'kien/ctrlp.vim'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
-Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'msanders/snipmate.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Powerline setup
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 set laststatus=2
@@ -88,13 +87,14 @@ if ! has('gui_running')
     augroup END
 endif
 
+call vundle#end()            " required
 filetype plugin indent on     " required!
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+" :PluginList          - list configured bundles
+" :PluginInstall(!)    - install (update) bundles
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused bundles
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.

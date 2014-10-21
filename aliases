@@ -20,3 +20,6 @@ alias scroff='xset dpms force off'
 alias nemo='nemo --no-desktop'
 alias xboxasmouse='sudo xboxdrv -w 0 --controller-slot 0 --detach-kernel-driver --mouse'
 alias tmux='tmux -2'
+alias atom=LD_LIBRARY_PATH=/opt/google/chrome ~/atom/atom.sh
+
+alias sigma='ssh dbraun@sigma.ug.edu.pl'
