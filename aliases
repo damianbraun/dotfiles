@@ -9,8 +9,8 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
 alias cd..='cd ..'
 alias ..='cd ..'
-alias ip2="ipython2"
-alias p2="python2"
+alias ip2="ipython"
+alias p2="python"
 alias ip3="ipython"
 alias p3="python3"
 alias h='history | grep $1'
@@ -18,8 +18,8 @@ alias c='clear'
 alias mkdir='mkdir -pv'
 alias scroff='xset dpms force off'
 alias nemo='nemo --no-desktop'
-alias xboxasmouse='sudo xboxdrv -w 0 --controller-slot 0 --detach-kernel-driver --mouse'
+#alias xboxasmouse='sudo xboxdrv -w 0 --controller-slot 0 --detach-kernel-driver --mouse'
 alias tmux='tmux -2'
-alias atom=LD_LIBRARY_PATH=/opt/google/chrome ~/atom/atom.sh
+alias atom="LD_LIBRARY_PATH=/opt/google/chrome ~/apps/atom/share/atom.sh"
 
 alias sigma='ssh dbraun@sigma.ug.edu.pl'
